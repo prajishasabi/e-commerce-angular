@@ -11,6 +11,7 @@ import { RecentOrderComponent } from './pages/recent-order/recent-order.componen
 import { OrderHistoryComponent } from './pages/order-history/order-history.component';
 import { SellerNavbarComponent } from './pages/seller-navbar/seller-navbar.component';
 import { SellerHomeComponent } from './pages/seller-home/seller-home.component';
+import { ChangePasswordComponent } from './pages/change-password/change-password.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { SellerHomeComponent } from './pages/seller-home/seller-home.component';
     OrderHistoryComponent,
     SellerNavbarComponent,
     SellerHomeComponent,
+    ChangePasswordComponent,
   ],
   imports: [
     CommonModule,

@@ -6,6 +6,7 @@ import { AdminComponent } from './admin.component';
 import { ApproveSellerComponent } from './pages/approve-seller/approve-seller.component';
 import { ViewSellerComponent } from './pages/view-seller/view-seller.component';
 import { ViewCustomerComponent } from './pages/view-customer/view-customer.component';
+import { AdminHomeComponent } from './pages/admin-home/admin-home.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ViewCustomerComponent } from './pages/view-customer/view-customer.compo
     AdminComponent,
     ApproveSellerComponent,
     ViewSellerComponent,
-    ViewCustomerComponent
+    ViewCustomerComponent,
+    AdminHomeComponent
   ],
   imports: [
     CommonModule,
