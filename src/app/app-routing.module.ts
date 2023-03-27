@@ -7,6 +7,7 @@ import { MyOrderComponent } from './customer/pages/my-order/my-order.component';
 import { OrderDetailsComponent } from './customer/pages/order-details/order-details.component';
 import { PaymentComponent } from './customer/pages/payment/payment.component';
 import { ProductDetailsComponent } from './customer/pages/product-details/product-details.component';
+import { ProfileComponent } from './customer/pages/profile/profile.component';
 import { CustomerLoginComponent } from './pages/customer-login/customer-login.component';
 import { CustomerRegistrationComponent } from './pages/customer-registration/customer-registration.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -30,7 +31,7 @@ const routes: Routes = [
   { path: 'order-details',component:OrderDetailsComponent},
   { path:'payment',component:PaymentComponent},
   { path:'product-details',component:ProductDetailsComponent},
-  // { path:'profile',component:ProfileComponent}
+  { path:'profile',component:ProfileComponent}
 
 ];
 

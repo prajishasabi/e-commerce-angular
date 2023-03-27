@@ -18,6 +18,8 @@ import { ChangePasswordComponent } from './customer/pages/change-password/change
 import { CustomerHomeComponent } from './customer/pages/customer-home/customer-home.component';
 import { CustomerNavbarComponent } from './customer/pages/customer-navbar/customer-navbar.component';
 import { CommonNavbarComponent } from './components/common-navbar/common-navbar.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -40,7 +42,10 @@ import { CommonNavbarComponent } from './components/common-navbar/common-navbar.
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
