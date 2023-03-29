@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -15,6 +16,13 @@ export class ApiService {
   }
   addSeller(formData: any): Observable<any>{
     return this.http.post(this.baseUrl+'seller_reg', formData)
+  }
+  
+  sellerLogin(formdata: NgForm):Observable<any>{
+    return this.http.post(this.baseUrl+'seller_login',formdata)
+  }
+  customerLogin(formdata:NgForm):Observable<any>{
+    return this.http.post(this.baseUrl+'customer_login',formdata)
   }
 
 }

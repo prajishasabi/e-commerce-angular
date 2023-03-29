@@ -16,7 +16,12 @@ import { SellerRegistrationComponent } from './pages/seller-registration/seller-
 
 const routes: Routes = [
   { path:'', redirectTo: 'home', pathMatch:'full'},
-  { path:'home', component: HomeComponent},
+  { path:'home', component: HomeComponent,
+
+  children: [
+   {path:'',  component: CustomerHomeComponent}
+  ]
+},
   { path:'seller-login', component: SellerLoginComponent},
   { path:'customer-login', component:CustomerLoginComponent},
   { path:'customer-registration',component:CustomerRegistrationComponent},
@@ -31,7 +36,8 @@ const routes: Routes = [
   { path: 'order-details',component:OrderDetailsComponent},
   { path:'payment',component:PaymentComponent},
   { path:'product-details',component:ProductDetailsComponent},
-  { path:'profile',component:ProfileComponent}
+  { path:'profile',component:ProfileComponent},
+  { path:'**',redirectTo:'home',pathMatch: 'full'}
 
 ];
 

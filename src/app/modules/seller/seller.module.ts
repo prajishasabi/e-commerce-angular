@@ -13,7 +13,8 @@ import { SellerNavbarComponent } from './pages/seller-navbar/seller-navbar.compo
 import { SellerHomeComponent } from './pages/seller-home/seller-home.component';
 import { ChangePasswordComponent } from './pages/change-password/change-password.component';
 import { SidebarComponent } from './pages/sidebar/sidebar.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,9 @@ import { SidebarComponent } from './pages/sidebar/sidebar.component';
   ],
   imports: [
     CommonModule,
-    SellerRoutingModule
+    HttpClientModule, 
+    SellerRoutingModule,
+    FormsModule
   ]
 })
 export class SellerModule { }

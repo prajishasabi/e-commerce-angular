@@ -1,0 +1,51 @@
+
+<app-admin-navbar></app-admin-navbar>
+
+<section style="height: 100%;">
+    <h4 class="text-center pt-4">Add Category</h4>
+    <div class="container py-2 " style="height:100%">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-md-8">
+                <div class="card" style="border-radius: 1rem;height:400px;width:500px;">
+                    <div class="row g-0">
+                        <div class="col-md-8 d-flex align-items-center">
+                            <div class="card-body p-4 p-lg-5 text-black">
+
+
+                                <form #form="ngForm" (ngSubmit)="submit(form.value)">
+
+
+
+                                    <!-- to error: add class "has-danger" -->
+                                    <div class="form-group">
+                                        <label for="Inputname">Category Name</label>
+                                        <input type="text" name="category_name" ngModel
+                                            class="form-control form-control-sm mt-3" id="Inputname">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Inputname">Description</label>
+                                        <input type="text" name="category_des" ngModel
+                                            class="form-control form-control-sm mt-3" id="Inputnumber">
+                                    </div>
+
+
+                                    <div class="form-group mt-3">
+                                        <label for="Inputimage">Category Image</label>
+                                        <input type="file" id="file-ip-1" name="category_image" ngModel accept="image/*"
+                                            (change)="UploadImage($event)" class="form-control mt-3" />
+                                    </div>
+                                    <button type="submit"
+                                        class="btn btn-primary btn-block mt-5 text-center">Submit</button>
+
+
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- </div> -->

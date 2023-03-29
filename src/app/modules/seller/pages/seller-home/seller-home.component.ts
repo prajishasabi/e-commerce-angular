@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./seller-home.component.scss']
 })
 export class SellerHomeComponent {
-
+  seller_name : any
+  ngOnInit(){
+    this.seller_name = localStorage.getItem('sellername')  
+    console.log(this.seller_name)
+     }
 }

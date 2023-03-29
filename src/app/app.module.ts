@@ -20,6 +20,7 @@ import { CustomerNavbarComponent } from './customer/pages/customer-navbar/custom
 import { CommonNavbarComponent } from './components/common-navbar/common-navbar.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { HttpClientModule } from '@angular/common/http'
     CustomerHomeComponent,
     CustomerNavbarComponent,
     CommonNavbarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -9,42 +9,51 @@
     <div class="container py-2 " style="height:100%">
         <div class="row d-flex justify-content-center align-items-center">
             <div class="col-md-8">
-                <div class="card" style="border-radius: 1rem;height:650px;width:700px">
+                <div class="card" style="border-radius: 1rem;height:700px;width:500px">
                     <div class="row g-0">
                         <div class="col-md-8 d-flex align-items-center">
                             <div class="card-body p-4 p-lg-5 text-black">
                                 
 
-                                <form>
+                                <form #form="ngForm" (ngSubmit)="submit(form.value)">
                     
 
 
                                     <!-- to error: add class "has-danger" -->
                                     <div class="form-group">
                                         <label for="Inputname">Product Name</label>
-                                        <input type="text" name="product_name" class="form-control form-control-sm mt-3" id="Inputname">
+                                        <input type="text" name="product_name" ngModel class="form-control form-control-sm mt-3" id="Inputname">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Inputname">Category</label>
+                                         <select name="" class="form-control mt-3" id="" name="category" ngModel>
+                                            <option value="{{ items.id }}" *ngFor = "let items of categoryList">
+                                                {{ items.category_name }}
+                                            </option>
+                                         </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="Inputname">Product Code</label>
-                                        <input type="text" name="product_code" class="form-control form-control-sm mt-3" id="Inputnumber">
+                                        <input type="text" name="product_no" ngModel class="form-control form-control-sm mt-3" id="Inputnumber">
                                     </div>
                                     <div class="form-group">
                                         <label for="Inputdescription">Description</label>
-                                        <textarea  name="description" class="form-control form-control-sm mt-3"
+                                        <textarea  name="product_des" ngModel class="form-control form-control-sm mt-3"
                                             id="Inputdescription"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Inputprice">Product Price</label>
+                                        <input type="text" class="form-control form-control-sm mt-3" name="price" ngModel id="Inputcategory">
                                     </div>
                                     
                                     <div class="form-group">
                                         <label for="Inputstock">Product stock</label>
-                                        <input type="text" class="form-control form-control-sm mt-3" name="stock" id="Inputcategory">
+                                        <input type="text" class="form-control form-control-sm mt-3" name="stock" ngModel id="Inputcategory">
                                     </div>
-                                    <div class="form-group">
-                                        <label for="Inputprice">Product Price</label>
-                                        <input type="text" class="form-control form-control-sm mt-3" name="price" id="Inputcategory">
-                                    </div>
+                                    
                                     <div class="form-group mt-3">
                                         <label for="Inputimage">Product Image</label>
-                                        <input type="file" id="file-ip-1"  name ="image" accept="image/*" onchange="showPreview(event)" class="form-control mt-3" />
+                                        <input type="file" id="file-ip-1"  name ="product_image" accept="image/*" (change)="Uploadimage($event)" class="form-control mt-3" />
                                     </div>
                                     <button type="submit" class="btn btn-primary btn-block mt-5 text-center">Submit</button>
 

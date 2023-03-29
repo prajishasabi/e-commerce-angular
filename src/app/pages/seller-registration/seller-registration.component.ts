@@ -7,6 +7,7 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./seller-registration.component.scss']
 })
 export class SellerRegistrationComponent {
+  message:string = ''
   constructor(private api: ApiService){
   }
   sellerPic: any
@@ -30,6 +31,7 @@ export class SellerRegistrationComponent {
     this.api.addSeller(uploadedData).subscribe((res: {message: string}) =>{
 
       console.log(res.message)
+      this.message = res.message
 
 
 

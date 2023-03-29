@@ -7,6 +7,9 @@ import { ApproveSellerComponent } from './pages/approve-seller/approve-seller.co
 import { ViewSellerComponent } from './pages/view-seller/view-seller.component';
 import { ViewCustomerComponent } from './pages/view-customer/view-customer.component';
 import { AdminHomeComponent } from './pages/admin-home/admin-home.component';
+import { CatogoryComponent } from './pages/catogory/catogory.component';
+import { FormsModule } from '@angular/forms';
+import { AdminNavbarComponent } from './pages/admin-navbar/admin-navbar.component';
 
 
 @NgModule({
@@ -15,11 +18,14 @@ import { AdminHomeComponent } from './pages/admin-home/admin-home.component';
     ApproveSellerComponent,
     ViewSellerComponent,
     ViewCustomerComponent,
-    AdminHomeComponent
+    AdminHomeComponent,
+    CatogoryComponent,
+    AdminNavbarComponent
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    FormsModule
   ]
 })
 export class AdminModule { }

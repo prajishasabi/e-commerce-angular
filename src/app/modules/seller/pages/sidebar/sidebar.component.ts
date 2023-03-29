@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
+  constructor (private route:Router){}
 
+  logout()
+{
+  localStorage.removeItem('seller_token')
+  this.route.navigateByUrl('/home')
+
+
+
+}
 }
