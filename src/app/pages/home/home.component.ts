@@ -9,6 +9,11 @@ import { Router } from '@angular/router';
 export class HomeComponent {
 
   constructor(private router: Router){}
+tokenExist:any
+  ngOnInit(){
+     this.tokenExist = !!localStorage.getItem('customer_token')
+  }
+  
 
   goToSellerLogin(){
     this.router.navigate(['seller-login'])

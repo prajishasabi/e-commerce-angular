@@ -49,12 +49,26 @@
 
 
                 <ul class="navbar-nav " style="padding-left:90px">
-                    <!-- <li class="nav-item">
-             <a class="nav-link active" aria-current="page" href="/customer-registration">Customersignup</a>
-           </li>  -->
-                    <li class="nav-item">
-                        <a class="nav-link active" routerLink="/customer-login">CustomerLogin</a>
-                    </li>
+                   
+
+                    <div  *ngIf = "tokenExist; 
+                    then login else logout">
+
+                    </div>
+
+                    <ng-template #login>
+                        <li class="nav-item" >
+                            <a class="nav-link active" routerLink="/customer-login">Customer Login</a>
+                        </li>
+    
+                    </ng-template>
+                    <ng-template #logout>
+                        <li class="nav-item" >
+                            <a class="nav-link active" routerLink="">Customer Logout</a>
+                        </li>
+    
+                    </ng-template>
+                   
                 </ul>
 
 

@@ -24,5 +24,9 @@ export class ApiService {
   customerLogin(formdata:NgForm):Observable<any>{
     return this.http.post(this.baseUrl+'customer_login',formdata)
   }
+  listCategory():Observable<any>{
+    return this.http.get(this.baseUrl+'home_category')
+
+  }
 
 }

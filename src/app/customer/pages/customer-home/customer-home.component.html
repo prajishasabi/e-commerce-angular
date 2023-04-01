@@ -1,35 +1,41 @@
 <div class="container-fluid">
-<div class="row">
+  <div class="row">
 
-  <div class="col-md-3"></div>
-  <div class="col-6 pt-2">
-    <img src="assets/best.jpg" class="img-fluid border-rounded" id="master">
+    <div class="col-md-3"></div>
+    <div class="col-6 pt-2">
+      <img src="assets/best.jpg" class="img-fluid border-rounded" id="master">
+    </div>
+
   </div>
+
+
+  <div class="row">
+    <div class="col-md-3" *ngFor = "let category of categoryLists">
+<a href="">
+
+      <div class="card ml-5 mt-5 " style="width:16rem; height:350px">
+        <div class="card-body text-center">
+          <img src="../../../assets/cart1.webp" id="imgproducts" style="width:100px;height:200px" class="img-fluid"
+            id="imgproducts">
+          <h4 style=" color:black" class="card-title text-center">{{category.category_name}}</h4>
+
+          <p class="card-text">{{category.category_des}}</p>
+          <span> seller name:Blosom</span>
+
+        </div>
+      </div>
+    
+    </a>
+
+    </div>
+
+  </div>
+
 
 </div>
-
-
-<div class="row">
-
-
-  <div class="col-md-3">
-    <!-- <a href=""> -->
-    <div class="card ml-5 mt-5 " style="width:16rem; height:350px">
-      <div class="card-body text-center">
-        <img src="../../../assets/cart1.webp" id="imgproducts" style="width:100px;height:200px" class="img-fluid"
-          id="imgproducts">
-        <h4 style=" color:black" class="card-title text-center">A-line Kurta</h4>
-
-        <p class="card-text">Rs.780</p>
-        <span> seller name:Blosom</span>
-
-      </div>
-    </div>
-    <!-- </a> -->
-
-  </div>
-  <div class="col-md-3">
-    <!-- <a href=""> -->
+<!-- </div>
+<div class="col-md-3">
+    
     <div class="card ml-5 mt-5 " style="width:16rem; height:350px">
       <div class="card-body text-center">
         <img src="../../../assets/cat3.webp" id="imgproducts" style="width:100px;height:200px" class="img-fluid">
@@ -40,11 +46,10 @@
 
       </div>
     </div>
-    <!-- </a> -->
 
-  </div>
-  <div class="col-md-3">
-    <!-- <a href=""> -->
+  </div> -->
+<!-- <div class="col-md-3">
+    
     <div class="card ml-5 mt-5 " style="width:16rem; height:350px">
       <div class="card-body text-center">
         <img src="../../../assets/cat5.webp" id="imgproducts" style="width:100px;height:200px" class="img-fluid">
@@ -55,11 +60,11 @@
 
       </div>
     </div>
-    <!-- </a> -->
+    
 
-  </div>
-  <div class="col-md-3">
-    <!-- <a href=""> -->
+  </div> 
+<div class="col-md-3">
+    
     <div class="card ml-5 mt-5 " style="width:16rem; height:350px">
       <div class="card-body text-center">
         <img src="../../../assets/cat2.webp" id="imgproducts" style="width:100px;height:200px" class="img-fluid">
@@ -69,16 +74,13 @@
         <span> seller name:Angel</span>
 
       </div>
-    </div>
-    <!-- </a> -->
-
-  </div>
+    </div> 
 
 
+  </div> -->
+
+ 
 
 
 
 
-</div>
-
-</div>
