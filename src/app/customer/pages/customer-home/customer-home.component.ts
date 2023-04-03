@@ -10,14 +10,19 @@ export class CustomerHomeComponent {
   constructor(private api: ApiService){}
   categoryLists : any
   ngOnInit(){
+  
   let token_exist = !!localStorage.getItem('customer_token')
 
  
-  this.api.listCategory().subscribe((res:{'category': Array<any>})=>{
+  this.api.listCategory().subscribe((res:{'category': Array<any>,cat_token: number})=>{
   this.categoryLists = res.category
+  
+
+
   console.log(res.category)
 
   })
+
 }
 
 }

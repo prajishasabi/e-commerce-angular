@@ -28,5 +28,14 @@ export class ApiService {
     return this.http.get(this.baseUrl+'home_category')
 
   }
+  listproducts(categoryID:any):Observable<any>{
+    return this.http.get(this.baseUrl+'view_products?cid='+categoryID)
+  }
+
+  changePassword(formdata: any, customerId : number):Observable<any>{
+    return this.http.put(this.baseUrl + 'change/password/'+ customerId,formdata)
+  }
+ 
+
 
 }

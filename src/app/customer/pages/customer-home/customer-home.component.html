@@ -11,11 +11,11 @@
 
   <div class="row">
     <div class="col-md-3" *ngFor = "let category of categoryLists">
-<a href="">
+<a [routerLink]="['/product-details']" [queryParams]="{'cat':category.id}">
 
       <div class="card ml-5 mt-5 " style="width:16rem; height:350px">
         <div class="card-body text-center">
-          <img src="../../../assets/cart1.webp" id="imgproducts" style="width:100px;height:200px" class="img-fluid"
+          <img src="http://127.0.0.1:8000/{{category.category_image}}" id="imgproducts" style="width:100px;height:200px" class="img-fluid"
             id="imgproducts">
           <h4 style=" color:black" class="card-title text-center">{{category.category_name}}</h4>
 

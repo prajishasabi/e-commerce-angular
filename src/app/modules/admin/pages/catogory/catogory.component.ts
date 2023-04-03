@@ -28,6 +28,9 @@ export class CatogoryComponent {
 
 
   })
+
+
+  
 }
 
 }
