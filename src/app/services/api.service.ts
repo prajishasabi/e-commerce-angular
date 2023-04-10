@@ -35,6 +35,11 @@ export class ApiService {
   changePassword(formdata: any, customerId : number):Observable<any>{
     return this.http.put(this.baseUrl + 'change/password/'+ customerId,formdata)
   }
+
+  addtoCart(form_data: any): Observable<any>{
+    return this.http.post(this.baseUrl +'addto_cart',form_data)
+
+  }
  
 
 
